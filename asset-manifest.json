@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/OrganicVibe/static/css/main.f8f978f6.css",
-    "main.js": "/OrganicVibe/static/js/main.de15ef72.js",
+    "main.js": "/OrganicVibe/static/js/main.b6d433b1.js",
     "static/js/453.d7446e4a.chunk.js": "/OrganicVibe/static/js/453.d7446e4a.chunk.js",
     "static/media/Farmletabout.webp": "/OrganicVibe/static/media/Farmletabout.213bd7045db0a9a7ebb1.webp",
     "static/media/primary-page.png": "/OrganicVibe/static/media/primary-page.377b18c9f2ccdcafea94.png",
@@ -28,11 +28,11 @@
     "static/media/FB.svg": "/OrganicVibe/static/media/FB.a582bb31a2f2f3a66ebe024f42b2b4f7.svg",
     "static/media/X.svg": "/OrganicVibe/static/media/X.bf0ec07b5db6ef9337a9b2206f04388d.svg",
     "main.f8f978f6.css.map": "/OrganicVibe/static/css/main.f8f978f6.css.map",
-    "main.de15ef72.js.map": "/OrganicVibe/static/js/main.de15ef72.js.map",
+    "main.b6d433b1.js.map": "/OrganicVibe/static/js/main.b6d433b1.js.map",
     "453.d7446e4a.chunk.js.map": "/OrganicVibe/static/js/453.d7446e4a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f8f978f6.css",
-    "static/js/main.de15ef72.js"
+    "static/js/main.b6d433b1.js"
   ]
 }

@@ -1,0 +1,270 @@
+/* -----------------------------------------
+   GLOBAL FONTS
+------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+.hero-container {
+  width: 100%;
+  background-color: #01BF64;
+  text-align: center;
+  color: white;
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 30px;
+  letter-spacing: 0.2px;
+}
+
+
+/* -----------------------------------------
+   DEFAULT DESKTOP (≥1025px)
+------------------------------------------ */
+
+.hero-slide {
+  padding: 60px 0 20px;
+  position: relative;
+  width: 100%;
+}
+
+.percent {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.line {
+  font-size: 39px;
+  margin: 5px 0;
+}
+
+.highlight {
+  background: #fff;
+  color: #000;
+  font-size: 30px;
+  padding: 4px 24px;
+  display: inline-block;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 140px;
+  font-size: 150px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left {
+  left: 40px;
+}
+
+.right {
+  right: 40px;
+}
+
+/* BOTTOM SECTION */
+.hero-bottom {
+  /* margin-top: -120px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+.veg-img {
+  width: 60%;
+  max-width: 100%;
+  margin-top: 60px;
+}
+
+.join {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.livelife-img {
+  width: 700px;
+  max-width: 90%;
+}
+
+/* -----------------------------------------
+   DESKTOP "GET STARTED" CTA – Riverford style
+------------------------------------------ */
+
+.start-btn.desktop-cta {
+  margin-top: 24px;
+  padding: 14px 42px;
+
+  background-color: #ffffff;
+  color: #111;
+
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+
+  font-family: "Inter", "Work Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+
+  cursor: pointer;
+  outline: none;
+
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+/* Hover (Riverford subtle lift) */
+.start-btn.desktop-cta:hover {
+  background-color: #f7f7f7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+}
+
+/* Active (pressed) */
+.start-btn.desktop-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* -----------------------------------------
+      📱 MOBILE (≤ 779px)
+------------------------------------------ */
+@media (max-width: 779px) {
+
+
+  .hero-container {
+    padding: 40px 0;
+  }
+
+  .hero-slide {
+    width: 90%;
+    margin: auto;
+  }
+
+  .percent {
+    font-size: 55px !important;
+    /* margin-top: 110px; */
+  }
+
+  .line {
+    font-size: 18px !important;
+  }
+
+  .highlight {
+    font-size: 18px !important;
+    padding: 6px 18px;
+  }
+
+  .arrow {
+    font-size: 42px !important;
+    top: 60px !important;
+  }
+
+  .left {
+    left: 10px;
+  }
+
+  .right {
+    right: 10px;
+  }
+
+  /* Veg image (mobile wide stretch) */
+  .veg-img {
+    width: 220%;
+    /* margin-left: -60%; */
+    transform: scale(1.15);
+  }
+
+  .hero-bottom {
+    margin-top: -20px;
+  }
+
+  .join {
+    font-size: 16px !important;
+  }
+
+  .livelife-img {
+    width: 80%;
+  }
+}
+
+/* -----------------------------------------
+      📱 TABLET >= 780px AND <= 1024px
+------------------------------------------ */
+/* Hide HERO Get started button on mobile + tablet */
+/* @media (min-width: 780px) and (max-width: 1024px) { */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* .hero-bottom .start-btn,
+  .hero-bottom .desktop-cta {
+    display: none !important;
+  } */
+  .hero-container {
+    padding: 50px 0 20px;
+  }
+
+  .hero-slide {
+    width: 85%;
+    margin: auto;
+  }
+
+  .percent {
+    font-size: 120px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .line {
+    font-size: 28px;
+    line-height: 1.2;
+    padding: 0 40px;
+  }
+
+  .highlight {
+    font-size: 26px;
+    padding: 8px 30px;
+    margin-top: 15px;
+  }
+
+  /* Riverford-style arrow layout */
+  .arrow {
+    top: 120px !important;
+    /* font-size: 150px !important; */
+      font-size: 150px !important;
+    font-weight: 300;
+  }
+
+  .left {
+    left: -50px !important;
+  }
+
+  .right {
+    right: -50px !important;
+  }
+
+  /* Veg image */
+  .veg-img {
+    width: 70%;
+    max-width: 600px;
+    margin: 30px auto;
+    display: block;
+  }
+
+  .hero-bottom {
+    margin-top: -10px;
+  }
+
+  .join {
+    font-size: 28px;
+  }
+
+  .livelife-img {
+    width: 70%;
+    margin-top: 15px;
+  }
+}

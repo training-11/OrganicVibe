@@ -1,0 +1,350 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap'); */
+
+
+.grown-section {
+  position: relative;
+  background: HEX#01BF64;
+  padding-bottom: 120px;
+  overflow-x: hidden;
+  font-family:"Work Sans",sans-serif;
+  line-height: 1.8;
+
+}
+
+.grown-angled-top {
+  position: absolute;
+  top: 0;
+  left: -14%;
+  width: 140%;
+  height: 240px;
+  z-index: 1;
+  transform: rotate(-5deg);
+  transform-origin: top left;
+
+  background:
+    linear-gradient(90deg, #01BF64 0%, #01BF64 0%),
+
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0 2px, transparent 3px),
+    radial-gradient(circle at 40% 70%, rgba(255,255,255,0.02) 0 1.5px, transparent 2px),
+
+    radial-gradient(circle at 70% 30%, rgba(0,0,0,0.02) 0 1px, transparent 2px),
+    radial-gradient(circle at 90% 80%, rgba(0,0,0,0.018) 0 1px, transparent 2px);
+  background-size: cover, 60px 60px, 48px 48px, 36px 36px, 24px 24px;
+  background-blend-mode: normal, overlay, overlay, overlay, overlay;
+  box-shadow: none;
+}
+
+.grown-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 150px; 
+  padding-left: 80px;
+  padding-right:80px;
+  text-align: center;
+}
+
+.grown-title {
+    margin-top: 120px;
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  color: #3a2a19;
+  margin-bottom: 60px;
+  letter-spacing: 0.5px;
+}
+.grown-intro { display: none; }
+.grown-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  justify-items: center;
+  align-items: start;
+  padding: 0 20px;
+}
+
+.grown-image-wrap {
+  width: 360px;
+  height: 250px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin: 0 auto;
+  margin-left: -40px;
+
+}
+/* .grown-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+} */
+
+.grown-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+}
+
+/* .grown-card:nth-child(1) {
+  justify-self: start;
+} */
+ /* ✅ FIX for 3rd card — show full head clearly */
+.grown-card:nth-child(3) .grown-img {
+  height: auto;              /* ✅ VERY IMPORTANT */
+  object-fit: contain;       /* ✅ prevents cropping */
+  object-position: center;
+}
+
+.grown-card-text {
+  font-family: "Work Sans",sans-serif;
+  font-weight:400;
+  margin-top: 22px;
+  font-size: 16px;
+  line-height: 2.3;
+   color: #3b2f20;
+   flex: 1;
+  max-width: 320px;
+  text-align: center;
+  margin-left: -30px;
+  
+}
+.tablet-override-text { display: none; }
+/* ⭐⭐⭐ EXACT RIVERFORD MOBILE VIEW ★★★ */
+/* Mobile: up to 767px (exclude iPad Mini 768px) */
+@media (max-width: 767px) {
+
+  .grown-section {
+    background: #f4f1ec !important;
+    padding: 0;
+  }
+
+  .grown-angled-top {
+    display: none !important;
+  }
+
+  .grown-inner {
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f4f1ec;
+  }
+
+  .grown-title {
+    font-size: 32px;
+    font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    color: #3a2a19;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+  }
+
+  /* one card per screen */
+  .grown-grid {
+    display: block;
+  }
+
+  .grown-card {
+    margin-bottom: 50px;
+  }
+
+  /* ⭐ NO white box, NO padding — EXACT Riverford */
+  .grown-image-wrap {
+    width: 100%;
+    max-width: 380px;
+    height: 230px;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 auto 18px auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  /* ⭐ Image fills the container with rounded corners */
+  .grown-img {
+    width: 100%;
+    height: 230px;
+    display: block;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+  .grown-card-text {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #3b2f20;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  /* remove tractor text */
+  .grown-tractor-text {
+    display: none !important;
+  }
+}
+
+
+/* ==========================
+   TABLET VIEW: 768px - 1024px
+   - Tractor image hidden, tractor text full-width under heading
+   - Other cards: image ABOVE, text BELOW, two columns
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .grown-inner { padding-top: 120px; max-width: 900px; }
+
+  .grown-title { font-size: 46px; margin-bottom: 8px; }
+  .grown-lead { font-size: 16px; margin-bottom: 24px; }
+
+  /* 2 columns on tablet */
+
+  /* if you still have a 3rd (tractor) card and want it hidden on tablet,
+     uncomment the rule below to hide its image while keeping its text:
+  .grown-card:nth-child(2) .grown-image-wrap { display: none !important; }
+  .grown-card:nth-child(2) .grown-card-text { grid-column: 1 / -1; display:block; margin: 0 auto 30px; }
+  */
+@media (min-width: 768px) and (max-width: 999px) {
+  /* .grown-section { background: #f4f1ec !important; } */
+  /* .grown-angled-top { display: none !important; } */
+
+  .grown-inner { max-width: 980px; padding: 80px 24px 60px; text-align: center; margin: 0 auto; }
+  .grown-title { font-size: 46px; margin-bottom: 12px; padding-top: 20px; }
+
+  .grown-intro {
+    display: block;
+    max-width: 440px;
+    margin: 0 auto 26px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #3b2f20;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .grown-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "onion farmer";
+    gap: 44px 48px;
+    align-items: start;
+    justify-items: center;
+    padding: 0 12px;
+    margin: 0 auto;
+  }
+  /* Hide tractor card entirely on tablet */
+  .grown-card:nth-child(2) { display: none !important; }
+  .grown-card:nth-child(1) { grid-area: onion; }
+  .grown-card:nth-child(3) { grid-area: farmer; }
+
+  .grown-image-wrap {
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 16/10;
+    height: auto;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    
+  }
+
+  /* no tractor-specific width overrides because it's hidden */
+
+  .grown-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .grown-card-text { max-width: 520px; margin: 16px auto 0; text-align: center; line-height: 1.85;padding-top: 20px; }
+
+  /* Tablet-only: show alternate text for targeted card, hide its default text */
+  .grown-card.tablet-override .grown-card-text { display: none; }
+  .grown-card.tablet-override .tablet-override-text { display: block; margin-top: 16px; }
+
+  /* Tablet-only: keep onions card order as image first, then text */
+  .grown-card:nth-child(1) .grown-card-text {
+    order: initial;
+    margin-top: 16px;
+    margin-bottom: 0;
+    max-width: 520px;
+  }
+}
+
+/* Large Desktop/Monitor View */
+@media (min-width: 1400px) {
+  .grown-inner {
+    max-width: 1600px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  
+  .grown-title {
+    font-size: 65px;
+  }
+  
+  .grown-grid {
+    gap: 80px;
+  }
+}
+
+/* Desktop-perfect: 3-up row between 1000px and 1318px */
+@media (min-width: 999px) and (max-width: 1318px) {
+  .grown-inner {
+    max-width: 1280px;
+    padding-left: 48px;
+    padding-right: 48px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .grown-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grown-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px !important;
+    justify-items: center;
+    align-items: start;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .grown-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .grown-image-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    max-width: 360px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin: 0 auto;
+  }
+
+  .grown-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .grown-card-text {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}

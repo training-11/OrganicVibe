@@ -1,0 +1,521 @@
+.footer {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+
+.footer-top-section {
+  background-color: #01BF64;
+  padding: 60px 80px;
+  color: white;
+}
+
+.footer-bottom-section {
+  background-color: #e0e0e0;
+  padding: 30px 80px;
+  color: #333;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 60px;
+  margin-bottom: 0;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Large Desktop/Monitor View */
+@media (min-width: 1400px) {
+  .footer-top-section {
+    padding: 70px 120px;
+  }
+
+  .footer-bottom-section {
+    padding: 30px 120px;
+  }
+
+  .footer-container {
+    column-gap: 80px;
+  }
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-column p {
+  margin: 6px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  line-height: 1.6;
+}
+
+.footer-terms {
+  margin-top: auto !important;
+  /* Forces it to the bottom */
+  padding-top: 20px;
+  font-size: 13px !important;
+  opacity: 0.8;
+  color: #e0e0e0;
+  cursor: default !important;
+  /* Not a link */
+  text-decoration: none !important;
+}
+
+.footer-terms:hover {
+  text-decoration: none !important;
+}
+
+.footer-column p:not(.footer-terms):hover {
+  text-decoration: underline;
+}
+
+.footer-column img.store-img {
+  display: block;
+  width: 150px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.footer-column img.store-img:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.social-icons {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 10px;
+  transform: translateX(-100px);
+  margin-right: -50px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.social-icon:hover {
+  background-color: rgb(92, 116, 119);
+  color: #01BF64;
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Responsive */
+/* @media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+} */
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .store-img {
+    width: 130px;
+  }
+}
+
+/* Mobile: up to 767px (exclude iPad Mini 768px) */
+@media (max-width: 767px) {
+
+  .footer-top-section {
+    padding: 40px 20px;
+    color: white;
+  }
+
+  .footer-bottom-section {
+    background-color: white !important;
+    padding: 30px 20px 120px 20px;
+    /* 120px bottom for sticky CTA */
+    color: #333;
+  }
+
+
+  .footer-container {
+    display: block;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  /* section heading */
+  .footer-column h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  /* footer items */
+  .footer-column p {
+    color: white !important;
+    /* soft grey like riverford */
+    margin: 6px 0;
+    font-size: 15px;
+  }
+
+  /* spacing between footer groups */
+  .footer-column {
+    margin-bottom: 28px;
+  }
+
+  .store-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    /* space between icons */
+    margin-top: 10px;
+  }
+
+  /* Tablet: 768px–1024px (iPad Mini included) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    /* two-column grid with explicit placement */
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+      row-gap: 40px;
+      max-width: none;
+      margin: 0 auto 40px;
+    }
+
+    /* Order columns: 1=About (L1), 3=Ordering (R1), 2=Help (L2), 4=App (R2) */
+    .footer-container .footer-column:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .footer-container .footer-column:nth-child(3) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .footer-container .footer-column:nth-child(2) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .footer-container .footer-column:nth-child(4) {
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: end;
+      text-align: right;
+    }
+
+    /* App store buttons right-aligned */
+    .store-row {
+      justify-content: flex-end;
+    }
+
+    /* Keep footer full-width padding consistent */
+    .footer {
+      padding: 60px 40px;
+    }
+  }
+
+  .store-img {
+    width: 130px;
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+  }
+
+  /* social icons centered */
+  .social-icons {
+    justify-content: left !important;
+    transform: none !important;
+    margin-top: 30px;
+    gap: 10px;
+    margin-left: 10px;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+  }
+
+  /* bottom text */
+  .footer-bottom {
+    max-width: 420px;
+    margin: 25px auto 0 auto;
+    text-align: left !important;
+    padding: 0 20px;
+
+  }
+
+  .footer-bottom p {
+    color: #ffffff;
+    /* high contrast for visibility on mobile */
+    font-size: 14px;
+    line-height: 1.5;
+
+  }
+}
+
+/* -----------------------------------------
+   📱 TABLET FOOTER (iPad Mini – EXACT Riverford)
+------------------------------------------ */
+/* ===============================
+   TABLET (768px–1024px)
+   4 COLUMN LAYOUT LIKE DESKTOP
+================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .footer-top-section {
+    background-color: #01BF64;
+    padding: 60px 60px;
+  }
+
+  .footer-bottom-section {
+    background-color: white;
+    padding: 30px 60px;
+  }
+
+  .footer-container {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    /* ✅ 4 columns */
+    column-gap: 60px;
+    row-gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Ensure each column stays vertical */
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .footer-column p {
+    font-size: 15px;
+    margin: 6px 0;
+  }
+
+  /* App store buttons */
+  .store-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .store-img {
+    width: 150px;
+  }
+
+  /* Social icons aligned left */
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-top: 30px;
+    transform: none;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Footer bottom text */
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: left;
+  }
+}
+
+/* Contact & Social Row Styles */
+.footer-contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.footer-phone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.phone-icon-circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #01BF64;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #01BF64;
+}
+
+.phone-number {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+.footer-social-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.follow-us-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Override existing .social-icons specific positioning */
+.social-icons {
+  margin: 0 !important;
+  transform: none !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+}
+
+.footer-bottom-section .social-icon {
+  color: #333;
+  filter: invert(1);
+  /* Assuming icons are white, this makes them black/dark */
+}
+
+.footer-bottom-section .social-icon:hover {
+  color: white;
+  filter: none;
+  /* Revert to original (white) on hover due to dark background change */
+}
+
+/* Mobile Responsiveness for Contact Row */
+@media (max-width: 767px) {
+  .footer-contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 0;
+    border-top: none;
+  }
+
+  .footer-social-wrapper {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+}
+
+/* App & Payment Section Styles */
+.app-subtitle {
+  font-size: 14px !important;
+  margin-bottom: 12px !important;
+  opacity: 0.9;
+  text-decoration: none !important;
+  cursor: default !important;
+}
+
+.store-buttons-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.store-buttons-vertical .store-img {
+  width: 145px;
+  /* Slightly larger for emphasis */
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.payment-gateways {
+  margin-top: 10px;
+}
+
+.payment-title {
+  font-family: inherit;
+  font-style: normal;
+  font-size: 16px !important;
+  /* increased to match header hierarchy better */
+  color: white !important;
+  margin-bottom: 8px !important;
+  font-weight: 700 !important;
+  /* Match h3 bold */
+  letter-spacing: normal;
+  opacity: 1 !important;
+  /* Remove transparency */
+  text-decoration: none !important;
+  cursor: default !important;
+  margin-top: 20px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.payment-icon {
+  font-size: 32px;
+  color: white;
+}
+
+.payment-gateway-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin-top: 5px;
+}

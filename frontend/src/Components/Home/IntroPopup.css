@@ -1,0 +1,206 @@
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  /* background-blend-mode: darken; */
+
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow-y: auto;
+}
+
+
+.intro-content {
+  max-width: 650px;
+  width: 90%;
+  /* background: rgba(0, 0, 0, 0.65); */
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  /* backdrop-filter: blur(8px); */
+  /* margin-left: 15%; */
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); */
+}
+
+.intro-content h1 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.intro-subtext {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+.intro-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.intro-points li {
+  margin: 12px 0;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.gotit-btn {
+  background: #4caf50;
+  color: white;
+  padding: 12px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.gotit-btn:hover {
+  background: #3d8b41;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+/* ❌ Close Button */
+.close-btn {
+  position: absolute;
+  top: -20px;
+  right: -120px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+
+
+/* 📱 Mobile Responsive */
+@media (max-width: 767px) {
+
+ .intro-overlay {
+ background-image: none !important; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px; 
+  }
+
+.intro-content {
+    background-color: #f5ead8;
+    width: 100%;
+    max-width: 400px;
+    /* min-height: 75vh;      */
+    /* max-height: 85vh; */
+     height: auto;            
+    max-height: 90vh; 
+    padding: 32px 24px;
+    border-radius: 22px;
+    /* overflow-y: auto;      */
+}
+
+ .intro-content h1 {
+       color: #2f4f2f;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  /* 🌿 Move leaf to next line */
+  .intro-content h1::after {
+    content: "🌿";
+    display: block;         
+    font-size: 40px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  /* remove emoji from text line */
+  .intro-content h1 {
+    white-space: nowrap;
+  }
+.intro-content h1 span {
+    display: none;
+  }
+  .intro-subtext,
+  .intro-points li {
+    color: black;
+    font-size: 36px;
+  }
+  .gotit-btn {
+    width: 65%;              /* ✅ MATCHES screenshot-1 */
+    padding: 14px 0;
+    font-size: 18px;
+    border-radius: 10px;
+
+    display: block;
+    margin: 50px auto 20px;   
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content {
+    padding: 25px 20px;
+  }
+  .intro-content h1 {
+    font-size: 28px;
+  }
+  .intro-subtext,
+  .intro-points li {
+    font-size: 15px;
+  }
+  .gotit-btn {
+    width: 100%;
+    padding: 14px 28px;
+  }
+}
+
+/* 📲 iPad Mini / Air / Pro – SAME AS LAPTOP */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .intro-overlay {
+    background-image: url("../../Images/primary-page.png") !important;
+  
+     background-size: 100% 100%;   
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    width: 100vw;
+background-color: rgba(0, 0, 0, 0.8);
+   
+    align-items: flex-start;
+    padding: 40px 0;
+
+    overflow: hidden; 
+  }
+
+  .intro-content {
+    max-width: 520px;
+    width: 90%;
+    margin-top: 50px;
+  }
+}

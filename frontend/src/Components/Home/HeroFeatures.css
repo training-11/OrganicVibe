@@ -1,0 +1,321 @@
+/* DESKTOP – unchanged (Riverford style) */
+.hero-features {
+ margin-top: 0px !important;
+  background: #f4f1ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  padding: 50px 80px;
+  text-align: center;
+  padding-top: 40px !important;
+}
+body {
+  background:#f4f1ec;
+}
+
+
+.feature-box img {
+  width: 105px;
+  margin-bottom: 5px;
+}
+
+.feature-box p {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Large Desktop/Monitor View */
+@media (min-width: 1400px) and (max-width: 1799px) {
+  .hero-features {
+    gap: 250px;
+    padding: 80px 120px; /* restore desktop spacing */
+  }
+  
+  .feature-box img {
+    width: 115px;
+  }
+  
+  .feature-box p {
+    font-size: 24px;
+  }
+}
+
+
+
+/* -------------------------------------- */
+/* 📱 MOBILE – EXACT RIVERFORD LAYOUT     */
+/* -------------------------------------- */
+@media (max-width: 768px) {
+
+  /* full mobile layout - wrap to create rows */
+  .hero-features {
+     margin-top: -190px !important;    
+    padding-top: 10px !important;   
+    padding-bottom: 40px;
+    background: #f4f1ec;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 20px 60px;
+    text-align: center;
+    gap: 0px;
+    width: 100%;
+    
+  }
+
+  /* Reset all feature boxes */
+  .hero-features .feature-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* 100% ORGANIC (bee) - centered at top, full width */
+  .hero-features .feature-box:nth-child(2) {
+    order: 1;
+    width: 100%;
+    /* margin-bottom: 50px; */
+    flex-basis: 100%;  
+  }
+
+  .hero-features .feature-box:nth-child(2) img {
+    width: 120px;
+     margin-bottom: 10px;   
+  }
+
+  .hero-features .feature-box:nth-child(2) p {
+    font-size: 22px;
+    font-weight: 525;
+    line-height: 1.2;
+  }
+
+  /* Direct from farmers - left side of second row */
+  .hero-features .feature-box:nth-child(1) {
+    order: 2;
+    width: 48%;
+    flex-basis: 48%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: 50px;
+  }
+
+  .hero-features .feature-box:nth-child(1) img {
+    width: 70px;
+    margin-bottom: 10px;
+  }
+
+  .hero-features .feature-box:nth-child(1) p {
+    font-size: 16px;
+    font-weight: 525;
+    line-height: 1.2;
+  }
+
+  /* No artificial chemicals - right side of second row */
+  .hero-features .feature-box:nth-child(3) {
+    order: 3;
+    width: 48%;
+    flex-basis: 48%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: 50px;
+  }
+
+  .hero-features .feature-box:nth-child(3) img {
+    width: 70px;
+    margin-bottom: 10px;
+  }
+
+  .hero-features .feature-box:nth-child(3) p {
+    font-size: 16px;
+    font-weight: 525;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-features {
+    margin-top: -40px;          /* restore original desktop offset */
+    background: #f4f1ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;         /* restore original horizontal gap */
+    padding: 80px 0;    /* restore original vertical spacing */
+    text-align: center;
+  }
+
+  .feature-box img {
+    width: 110px;
+  }
+
+  .feature-box p {
+    font-size: 24px;
+  }
+}
+
+/* iPad Pro only: portrait 1024×1366 and landscape 1366×1024 */
+/* ===============================
+   FIX: HERO FEATURES (1000–1389px)
+   =============================== */
+
+/* ===============================
+   FIX: HERO FEATURES (1000–1389px)
+   =============================== */
+
+@media (min-width: 1000px) and (max-width: 1389px) {
+
+  .hero-features {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 300px;                 /* spacing between icons */
+    padding: 80px 0 100px;
+    background: #f4f1ec;
+    text-align: center;
+  }
+
+  .hero-features .feature-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 180px;
+  }
+
+  .hero-features .feature-box img {
+    width: 130px;
+    height: auto;
+    margin-bottom: 14px;
+  }
+
+  .hero-features .feature-box p {
+    font-family: "Special Elite", system-ui;
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 0;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ---------- font (paste at top of your main CSS once) ---------- */
+
+/* ---------- TABLET: 769px - 1023px (exclude iPad Pro) ---------- */
+@media (min-width: 769px) and (max-width: 1023px) {
+
+  /* ensure page can't scroll horizontally on tablet */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* center the whole feature row and limit its visual width */
+  .hero-features {
+    margin-top: -290px !important;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 860px;        /* visual content width similar to Riverford tablet */
+    margin: 0 auto;          /* center on page */
+    padding: 8px 10px;      /* breathing space above/below */
+    background: #f4f1ec;
+    display: flex;
+    justify-content: center; /* center the 3 items */
+    align-items: flex-start; /* keeps icons aligned to top of each box */
+    gap: 30px;              /* spacing between boxes (tweak +/- 10px if needed) */
+    text-align: center;
+    overflow: hidden;        /* stop any child overflow */
+  }
+
+
+  /* make each feature box same size and centered */
+  .hero-features .feature-box {
+    width: 200px;            /* fixes width for consistent layout */
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin: 0;               /* remove mobile offsets */
+    order: 0;               /* cancel any mobile reordering */
+  }
+
+  /* icon size tuned for tablet */
+  .hero-features .feature-box img {
+    width: 76px;             /* Riverford-like icon size on tablet */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* heading font: Caveat to keep same handwritten look */
+  .hero-features .feature-box p {
+    font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 20px;         /* large but readable on tablet */
+    line-height: 1.05;
+    margin: 0;
+    color: inherit;
+    letter-spacing: 0.5px;
+  }
+
+  /* If you used nth-child mobile ordering, reset spacing for tablet */
+  .hero-features .feature-box:nth-child(1),
+  .hero-features .feature-box:nth-child(2),
+  .hero-features .feature-box:nth-child(3) {
+    margin-top: 0;
+  }
+}
+
+/* iPad Air: pull icon row closer to the green hero */
+@media (min-width: 820px) and (max-width: 1023px) {
+  .hero-features {
+    margin-top: -300px !important;   /* move icons upward (icons section only) */
+    padding-top: 0 !important;      /* remove extra space above icons */
+    padding-bottom: 36px;           /* slightly tighter space below */
+  }
+}
+
+/* ===================================== */
+/* iPad Pro – reduce large top gap ONLY  */
+/* 1024×1366 (portrait) & 1366×1024      */
+/* ===================================== */
+@media (width: 1024px) and (orientation: portrait),
+       (width: 1366px) and (orientation: landscape) {
+
+  .hero-features {
+    margin-top: -460px !important;   
+    padding-top: 20px !important;    
+    padding-bottom: 40px !important; 
+    gap: 180px !important;          
+    align-items: flex-start;
+  }
+
+  .hero-features .feature-box img {
+    width: 110px !important;        
+    margin-bottom: 8px;
+  }
+
+  .hero-features .feature-box p {
+    font-size: 22px !important;
+    line-height: 1.2;
+  }
+}
+
+

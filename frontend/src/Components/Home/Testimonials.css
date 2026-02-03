@@ -1,0 +1,456 @@
+/* src/Components/Testimonials/Testimonials.css */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Georgia&display=swap');
+
+
+.testimonials {
+    background-color: #01BF64;
+  padding: 60px 80px;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  border: 0;
+}
+
+.testimonials::before,
+.testimonials::after {
+  content: none !important;
+}
+
+.testimonials *,
+.testimonials *::before,
+.testimonials *::after {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+.testimonials-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Large Desktop/Monitor View */
+@media (min-width: 1400px) {
+  .testimonials {
+    padding: 70px 120px;
+  }
+  
+  .testimonials-inner {
+    max-width: 1400px;
+  }
+  
+  .testimonials-title {
+    font-size: 60px;
+  }
+  
+  .testimonials-grid {
+    gap: 140px;
+  }
+}
+
+.testimonials-title {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
+  letter-spacing: 1px;
+  margin: 0 0 45px 0;
+}
+
+.testimonials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+
+.testimonial {
+  max-width: 420px;
+  text-align: center;
+}
+
+.quote-mark {
+    font-size: 78px;
+  line-height: 0.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-family: "Special Elite", system-ui;
+  max-width: 480px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0 0 28px 0;
+  letter-spacing: 0.5px;
+}
+
+.highligth,
+.highligh {
+  background-color: #f1e9d7;
+  color: #2e2400;
+  padding: 6px 10px;
+  border-radius: 3px;
+  font-weight: 525;
+  display: inline-block;
+  margin: 4px 0;
+  line-height: 1.3;
+}
+
+
+/* ---------- SHOW TWO BIG QUOTES SIDE-BY-SIDE (Riverford style) ---------- */
+/* Paste this at the end of your Testimonials.css (after existing rules) */
+
+@media (min-width: 768px) {
+
+  /* Use a two-column grid so both quotes sit exactly side-by-side */
+  .testimonials-inner {
+    max-width: 900px;           /* reading width similar to Riverford */
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  .testimonials-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;  /* two columns */
+    gap: 48px 60px;                  /* vertical / horizontal gap */
+    align-items: start;
+    justify-items: center;
+    width: 100%;
+  }
+
+  /* Each testimonial becomes a centered column block */
+  .testimonial {
+    width: 100%;
+    max-width: 420px;               /* controls line-length like Riverford */
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* big decorative quote mark centered above each quote */
+  .quote-mark,
+  .testimonial > img[alt=""] /* fallback if you used img for the mark */ {
+    display: block;
+    margin: 0 auto 8px auto;
+    width: 120px;
+    height: auto;
+  }
+
+  /* the quote text uses Caveat and is larger for tablet/desktop */
+  .testimonial-text {
+    font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 0 auto 16px;
+    max-width: 380px;               /* limit the text width for nicer wrapping */
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+
+  .highligth, .highligh {
+    background: #f1e9d7;
+    color: #2e2400;
+    padding: 5px 9px;
+    border-radius: 3px;
+    font-weight: 525;
+    display: inline-block;
+    margin: 3px 0;
+    line-height: 1.3;
+  }
+
+  /* author (if used) — small and spaced below */
+  .testimonial-author {
+    font-size: 12px;
+    color: rgba(255,255,255,0.9);
+    margin-top: 16px;
+  }
+
+  /* keep mobile slider hidden at these widths */
+  .testimonials-mobile { display: none !important; }
+
+  /* ensure no horizontal overflow */
+  html, body { overflow-x: hidden !important; }
+}
+
+/* on wider desktop increase spacing a little */
+@media (min-width: 1200px) {
+  .testimonials-grid { gap: 56px 100px; }
+  .testimonial-text { font-size: 22px; max-width: 420px; }
+  .quote-mark { width: 140px; }
+}
+@media (max-width: 900px) {
+  .testimonials {
+    padding: 60px 16px;
+  }
+
+  .testimonials-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .testimonials-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .testimonial {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .quote-mark {
+    font-size: 60px;
+    margin-bottom: 8px;
+  }
+
+  .testimonial-text {
+    font-size: 18px;
+  }
+/* 
+  .testimonial-author {
+    font-size: 12px;
+  } */
+}
+/* MOBILE CAROUSEL */
+.testimonials-mobile-wrapper {
+  display: none;
+}
+
+.testimonials-mobile {
+  display: none;
+}
+
+.testimonial-dots {
+  display: none;
+}
+
+/* Mobile: up to 767px (exclude iPad Mini 768px) */
+@media (max-width: 767px) {
+  .testimonials {
+    padding: 60px 20px 40px;
+  }
+
+  .testimonials-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  /* Hide desktop grid */
+  .testimonials-grid {
+    display: none !important;
+  }
+
+  /* Show mobile carousel wrapper */
+  .testimonials-mobile-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Mobile testimonials container */
+  .testimonials-mobile {
+    display: block;
+    flex: 1;
+    text-align: center;
+    padding: 0 30px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Testimonial slider wrapper */
+  .testimonial-slider {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+  }
+
+  .mobile-card {
+    position: absolute;
+    width: 100%;
+    padding: 20px 10px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
+    pointer-events: none;
+  }
+
+  /* Active slide */
+  .mobile-card.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    position: relative;
+  }
+
+  /* Previous slide (off to left) */
+  .mobile-card.prev {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  /* Next slide (off to right) */
+  .mobile-card.next {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  .quote-img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .mobile-card .testimonial-text {
+    font-size: 26px !important;
+    line-height: 1.45;
+    font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    color: white;
+    letter-spacing: 0.5px;
+  }
+
+  /* Simple arrow icons - NO circular button */
+  .simple-arrow {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 60px;
+    font-weight: 150;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    transition: all 0.3s ease;
+    z-index: 10;
+    flex-shrink: 0;
+    opacity: 0.85;
+  }
+
+  .simple-arrow:hover:not(.disabled) {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+  .simple-arrow:active:not(.disabled) {
+    transform: scale(0.95);
+  }
+
+  /* Disabled arrow state */
+  .simple-arrow.disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .arrow-left {
+    margin-right: 10px;
+  }
+
+  .arrow-right {
+    margin-left: 10px;
+  }
+
+  /* Pagination dots */
+  .testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+
+  .dot:disabled {
+    cursor: not-allowed;
+  }
+
+  .dot.active {
+    background: white;
+    transform: scale(1.3);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+
+  .dot:hover:not(.active):not(:disabled) {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+  }
+}
+
+/* Tablet: 768px–1024px (iPad Mini included) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Make section full-bleed on tablets (iPad Mini included) */
+  .testimonials {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* Ensure desktop grid is visible on tablets */
+  .testimonials-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 60px;
+    align-items: start;
+    justify-items: center;
+    width: 100%;
+  }
+
+  /* Hide mobile carousel on tablets */
+  .testimonials-mobile-wrapper,
+  .testimonials-mobile,
+  .testimonial-dots {
+    display: none !important;
+  }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+  .testimonials-title {
+    font-size: 36px;
+  }
+
+  .mobile-card .testimonial-text {
+    font-size: 22px !important;
+  }
+
+  .simple-arrow {
+    font-size: 50px;
+  }
+
+  .testimonials-mobile {
+    padding: 0 15px;
+  }
+
+  .testimonial-slider {
+    min-height: 320px;
+  }
+}

@@ -1,0 +1,62 @@
+import React from "react";
+import "./StepsSection.css";
+import pics1 from "../../Images/pics1.png";
+import pics2 from "../../Images/pics2.png";
+import places3 from "../../Images/place3.png";
+
+export default function StepsSection() {
+  return (
+    <section className="steps-section">
+      <div className="Header">
+        <h1>How Organic Vibes Works</h1>
+      </div>
+      <div className="steps-container">
+        <div className="step-box">
+          <img className="step-img" src={pics1} alt="Step 1" />
+
+          <h2 className="step-title">
+            Choose a weekly <br /> box of goodness
+          </h2>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap"
+            rel="stylesheet"
+          ></link>
+
+          <p className="step-description">
+            We offer a variety of set boxes to suit your needs, harvested from
+            our own fields and grower friends. Each box is carefully picked and
+            packed by us every week.
+          </p>
+        </div>
+
+        <div className="step-box">
+          <img className="step-img" src={pics2} alt="Step 2" />
+
+          <h2 className="step-title">
+            Add farm-fresh <br /> essentials
+          </h2>
+
+          <p className="step-description">
+            You can also add other farm-fresh produce to your order. From fridge
+            fillers to store cupboard essentials, we have everything you need to
+            keep stocked up.
+          </p>
+        </div>
+
+        <div className="step-box">
+          <img className="step-img" src={places3} alt="Step 3" />
+
+          <h2 className="step-title">
+            Free delivery to <br /> your door
+          </h2>
+
+          <p className="step-description">
+            Get weekly deliveries on a set day for your area. Manage orders
+            easily with our app, receive push notifications and live delivery
+            updates.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

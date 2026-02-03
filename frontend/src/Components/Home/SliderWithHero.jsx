@@ -6,52 +6,52 @@ import livelife from "../../Images/livelife.png";
 // Mobile Sticky CTA Component - Riverford Style (JSX + CSS in one file)
 const MobileStickyBar = ({ hidden }) => {
   const handleGetStarted = () => {
-    console.log('Get started clicked');
+    console.log("Get started clicked");
     // Add your navigation/action here
   };
 
   // Inline styles for the sticky bar
   const barStyle = {
-    position: 'fixed',
+    position: "fixed",
     left: 0,
     right: 0,
     bottom: 0,
-    width: '100vw',
-    backgroundColor: '#00b359',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: '12px',
-    paddingBottom: 'max(12px, env(safe-area-inset-bottom))',
-    paddingLeft: '0',
-    paddingRight: '0',
-    boxSizing: 'border-box',
+    width: "100vw",
+    backgroundColor: "#00b359",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: "12px",
+    paddingBottom: "max(12px, env(safe-area-inset-bottom))",
+    paddingLeft: "0",
+    paddingRight: "0",
+    boxSizing: "border-box",
     zIndex: 9999,
-    boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.1)',
+    boxShadow: "0 -2px 10px rgba(0, 0, 0, 0.1)",
   };
 
   // Inline styles for the button
   const buttonStyle = {
-    width: '90%',
-    maxWidth: '360px',
-    height: '48px',
-    backgroundColor: 'white',
-    color: '#000',
-    border: '1px solid rgba(0, 0, 0, 0.1)',
-    borderRadius: '4px',
-    fontSize: '17px',
-    fontWeight: '700',
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.08)',
-    transition: 'all 0.2s ease',
-    outline: 'none',
+    width: "90%",
+    maxWidth: "360px",
+    height: "48px",
+    backgroundColor: "white",
+    color: "#000",
+    border: "1px solid rgba(0, 0, 0, 0.1)",
+    borderRadius: "4px",
+    fontSize: "17px",
+    fontWeight: "700",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.08)",
+    transition: "all 0.2s ease",
+    outline: "none",
   };
 
   // Only show on mobile screens and when not hidden
-  if ((typeof window !== 'undefined' && window.innerWidth > 768) || hidden) {
+  if ((typeof window !== "undefined" && window.innerWidth > 768) || hidden) {
     return null;
   }
 
@@ -62,17 +62,17 @@ const MobileStickyBar = ({ hidden }) => {
         onClick={handleGetStarted}
         aria-label="Get started with Farmlet"
         onMouseDown={(e) => {
-          e.currentTarget.style.transform = 'scale(0.98)';
+          e.currentTarget.style.transform = "scale(0.98)";
         }}
         onMouseUp={(e) => {
-          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.transform = "scale(1)";
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.boxShadow = '0 3px 6px rgba(0, 0, 0, 0.12)';
+          e.currentTarget.style.boxShadow = "0 3px 6px rgba(0, 0, 0, 0.12)";
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.08)';
-          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.08)";
+          e.currentTarget.style.transform = "scale(1)";
         }}
       >
         Get started
@@ -86,7 +86,7 @@ const slides = [
     percent: "92%",
     lines: [
       "of customers say",
-      "Farmlet's fruit & veg boxes",
+      "Organic Vibes's fruit & veg boxes",
       "make eating fruit & veg",
     ],
     highlight: "easier and tastier",
@@ -96,7 +96,7 @@ const slides = [
     percent: "97%",
     lines: [
       "of customers say",
-      "Farmlet's fruit & veg boxes help",
+      "Organic Vibes's fruit & veg boxes help",
       "their family",
     ],
     highlight: "eat more healthily",
@@ -105,7 +105,7 @@ const slides = [
     percent: "90%",
     lines: [
       "of customers say",
-      "Farmlet's fruit & veg boxes help their family",
+      "Organic Vibes's fruit & veg boxes help their family",
     ],
     highlight: "reduce ultra-processed foods",
     bottom: "in their diet",
@@ -146,11 +146,15 @@ export default function SliderWithHero({ mobileSearchOpen, signInOpen }) {
         <div className="hero-bottom">
           <img src={VegBox} alt="veg" className="veg-img" />
           <p className="join">Join the thousands of families who</p>
-          <img src={livelife} alt="Live Life on the Veg" className="livelife-img" />
+          <img
+            src={livelife}
+            alt="Live Life on the Veg"
+            className="livelife-img"
+          />
           <button className="start-btn desktop-cta">Get started</button>
         </div>
       </div>
-      
+
       {/* Mobile Sticky CTA Bar: hidden when mobile search or sign-in overlay is open */}
       <MobileStickyBar hidden={Boolean(mobileSearchOpen || signInOpen)} />
     </>
